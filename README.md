@@ -47,7 +47,7 @@ Hexagonal Architecture allows you to keep the system's core intact for a long ti
  └────────────────────────────────────────────────────────────────────────┘
  ```
 
-**Hexagonal Architecture** and **DDD**
+### 📂 Directory Structure: Hexagonal Architecture & DDD (by Eric Evans)
 
 ```
 src/main/scala/com/spaceumbrella/
