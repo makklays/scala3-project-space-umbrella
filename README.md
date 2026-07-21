@@ -15,19 +15,36 @@ I think it's very important to have the opportunity to avoid being double standa
 Hexagonal Architecture allows you to keep the system's core intact for a long time.
 
 ```text
-               ┌─────────────────────────────────────────────────┐
-               │                    ADAPTERS                     │
-               │  ┌───────────────────────────────────────────┐  │
-               │  │                  PORTS                    │  │
-               │  │  ┌─────────────────────────────────────┐  │  │
-               │  │  │               DOMAIN                │  │  │
-  [HTTP Request]──┼─>│  [In-Port]                          │  │  │
-               │  │  │  Satellite Logic                    │  │  │
-               │  │  │  Telemetry Valildation              │  │  │
-               │  │  │                          [Out-Port]─┼──┼──┼─>[Doobie / DB]
-               │  │  └─────────────────────────────────────┘  │  │
-               │  └───────────────────────────────────────────┘  │
-               └─────────────────────────────────────────────────┘
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │                    INFRASTRUCTURE LAYER (ADAPTERS)                     │
+  │  ┌──────────────────────────────────────────────────────────────────┐  │
+  │  │                   APPLICATION LAYER (USE CASES)                  │  │
+  │  │  ┌────────────────────────────────────────────────────────────┐  │  │
+  │  │  │                     DOMAIN LAYER (CORE)                    │  │  │
+  │  │  │  ┌──────────────────────────────────────────────────────┐  │  │  │
+  │  │  │  │                    AGGREGATE ROOT                    │  │  │  │
+  │  │  │  │                                                      │  │  │  │
+  │  │  │  │    [Main Entity]  <───────>  [Value Objects]         │  │  │  │
+  │  │  │  │          │                                           │  │  │  │
+  │  │  │  │          ▼ (Enforces Business Invariants)            │  │  │  │
+  │  │  │  │    [Domain Rules & Logic]                            │  │  │  │
+  │  │  │  └──────────────────────────────────────────────────────┘  │  │  │
+  │  │  │                                                            │  │  │
+  │  │  │  [In Port] (Interface)                                     │  │  │
+  │  │  │  Defines what the application can do                       │  │  │
+  │  │  │                                                            │  │  │
+  │  │  │  [Use Case Execution]                                      │  │  │
+  │  │  │  Orchestrates domain entities and business flows           │  │  │
+  │  │  │                                                            │  │  │
+  │  │  │  [Out Port] (Interface)                                    │  │  │
+  │  │  │  Defines what the application needs from outside ──────┐   │  │  │
+  │  │  └────────────────────────────────────────────────────────┼───┘  │  │
+  │  │                                                           │      │  │
+  │  │   [Inbound Adapter]                                       ▼      │  │
+──┼──┼─> Drives the application (API / CLI / Cron)        [Out Adapter]─┼──┼───> [External Services]
+  │  │                                                    Driven by application  (Database / Message Broker)
+  │  └──────────────────────────────────────────────────────────────────┘  │
+  └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
