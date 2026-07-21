@@ -50,7 +50,7 @@ Hexagonal Architecture allows you to keep the system's core intact for a long ti
 **Hexagonal Architecture** and **DDD**
 
 ```
- src/main/scala/com/spaceumbrella/
+src/main/scala/com/spaceumbrella/
 │
 ├── domain/                          # 🌌 DOMAIN LAYER (Business models and immutable rules of the universe)
 │   ├── model/                       # 
