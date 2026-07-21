@@ -45,6 +45,46 @@ Hexagonal Architecture allows you to keep the system's core intact for a long ti
  │  │                                        Driven by application  (Database/Message Broker)
  │  └──────────────────────────────────────────────────────────────────┘  │
  └────────────────────────────────────────────────────────────────────────┘
+ ```
+
+**Hexagonal Architecture** and **DDD**
+
+```
+ src/main/scala/com/spaceumbrella/
+│
+├── domain/                          # 🌌 DOMAIN LAYER (Business models and immutable rules of the universe)
+│   ├── model/                       # 
+│   │   ├── satellite/               # 📦 AGGREGATE: Satellite (Main Root)
+│   │   │   ├── Satellite.scala      # Aggregate Root Entity
+│   │   │   ├── SatelliteId.scala    # Value Object (Type-safe domain ID)
+│   │   │   ├── OrbitalTelemetry.scala # Value Object (Orbital physics parameters)
+│   │   │   └── Status.scala         # Value Object (Operational status enum)
+│   │   │
+│   │   └── category/                # 📦 AGGREGATE: Category
+│   │       ├── Category.scala       # Category Entity
+│   │       └── CategoryId.scala     # Value Object (Type-safe category ID)
+│   │
+│   └── exception/                   # Domain Exceptions (Pure business-rule errors)
+│       └── DomainException.scala    # (e.g., SatelliteThreatLevelOverflow)
+│
+├── application/                     # 🚀 APPLICATION LAYER (Scenario orchestration / Use Cases)
+│   ├── port/                        # 🔌 PORTS (Input/Output boundary interfaces)
+│   │   ├── inbound/                 # Inbound Ports (What the application can execute)
+│   │   │   └── TrackSatelliteUseCase.scala
+│   │   └── outbound/                # Outbound Ports (What the application requires from infrastructure)
+│   │       └── SatelliteRepository.scala
+│   │
+│   └── usecase/                     # Use Case Implementations (Core application services)
+│       └── TrackSatelliteService.scala
+│
+├── infrastructure/                  # ⚙️ INFRASTRUCTURE LAYER (Adapters, external ring of the ecosystem)
+│   ├── http/                        # Inbound Adapter (Http4s Network Layer, Circe JSON codecs)
+│   │   └── SatelliteRoutes.scala
+│   │
+│   └── db/                          # Outbound Adapter (Doobie Database Layer, PostgreSQL execution)
+│       └── DoobieSatelliteRepository.scala
+│
+└── Main.scala                       # 🏁 COMPOSITION ROOT (Main entry point for bootstrapping the application)
 ```
 
 ---
