@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="backend_1428,project-space-umbrella,scala3-project-space-umbrella-backend,space-umbrella-adapters,space-umbrella-app,space-umbrella-domain,space-umbrella-ports" />
+  </component>
+</project>

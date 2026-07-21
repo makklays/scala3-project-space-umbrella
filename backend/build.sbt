@@ -1,0 +1,48 @@
+import sbt.*  // Принудительный импорт sbt API для IDE
+import sbt.Keys.*
+
+val Scala3Version = "3.3.3"
+val Http4sVersion = "0.23.27"
+val CirceVersion  = "0.14.7"
+val DoobieVersion = "1.0.0-RC5"
+
+lazy val root = project
+  .in(file("."))
+  .settings(
+    name         := "project-space-umbrella",
+    version      := "0.1.0-SNAPSHOT",
+    scalaVersion := Scala3Version,
+
+    libraryDependencies ++= Seq(
+
+      // --- Functional Core & Effect ---
+      "org.typelevel" %% "cats-core" % "2.10.0",
+      "org.typelevel" %% "cats-effect" % "3.5.4",
+
+      // --- HTTP layer (Http4s) ---
+      "org.http4s" %% "http4s-ember-server" % Http4sVersion,
+      "org.http4s" %% "http4s-dsl" % Http4sVersion,
+      "org.http4s" %% "http4s-circe" % Http4sVersion,
+
+      // --- JSON (Circe) ---
+      "io.circe" %% "circe-generic" % CirceVersion,
+      "io.circe" %% "circe-parser" % CirceVersion,
+
+      // --- Logging ---
+      "ch.qos.logback" % "logback-classic" % "1.5.6",
+      //"org.typelevel" %% "log4cats-slf4j"      % "2.7.0",
+
+      // --- Database (Doobie Pure Functional JDBC) ---
+      "org.tpolecat" %% "doobie-core" % DoobieVersion,
+      "org.tpolecat" %% "doobie-postgres" % DoobieVersion,
+      //"org.tpolecat" %% "skunk-core" % "0.6.3",
+
+      // --- Database Migrations (Flyway & JDBC Driver) ---
+      "org.postgresql" % "postgresql" % "42.7.3",
+      "org.flywaydb" % "flyway-core" % "10.15.0",
+      "org.flywaydb" % "flyway-database-postgresql" % "10.15.0",
+
+      // --- FS2 ---
+      //"co.fs2"        %% "fs2-core"            % "3.10.2",
+    )
+  )

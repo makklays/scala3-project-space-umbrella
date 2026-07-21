@@ -1,4 +1,55 @@
 
+Start:
+# sbt run
+
+//--------------------------------------------------------------------------------------------------
+Что такое Агрегаты (Aggregates) в DDD и для чего они нужны?
+
+Агрегат в Domain-Driven Design — это кластер (группа) связанных между собой объектов данных (Сущностей и
+Объектов-Значений), которые рассматриваются системой как единое целое для любых изменений данных.
+
+У каждого Агрегата есть ровно одна главная сущность, которая называется Корень Агрегата (Aggregate Root).
+Внешний мир (другие модули, базы данных, API) не имеет права напрямую менять объекты внутри Агрегата.
+Все изменения запрашиваются строго через Корень Агрегата.
+
+//--------------------------------------------------------------------------------------------------
+
+src/main/scala/com/spaceumbrella/
+│
+├── domain/                          # 🌌 DOMAIN LAYER (Бизнес-модель и правила вселенной)
+│   ├── model/                       #
+│   │   ├── satellite/               # 📦 AGGREGATE: Спутник (Главный корень)
+│   │   │   ├── Satellite.scala      # Entity (Корень агрегата)
+│   │   │   ├── SatelliteId.scala    # Value Object (Типобезопасный ID)
+│   │   │   ├── OrbitalTelemetry.scala # Value Object (Данные орбиты)
+│   │   │   └── Status.scala         # Value Object (Enum статуса)
+│   │   │
+│   │   └── category/                # 📦 AGGREGATE: Категория
+│   │       ├── Category.scala       # Entity
+│   │       └── CategoryId.scala     # Value Object
+│   │
+│   └── exception/                   # Domain Exceptions (Бизнес-ошибки)
+│       └── DomainException.scala    # (e.g., SatelliteThreatLevelOverflow)
+│
+├── application/                     # 🚀 APPLICATION LAYER (Оркестрация сценариев / Use Cases)
+│   ├── port/                        # 🔌 PORTS (Интерфейсы ввода-вывода)
+│   │   ├── inbound/                 # Входные порты (Что приложение умеет делать)
+│   │   │   └── TrackSatelliteUseCase.scala
+│   │   └── outbound/                # Выходные порты (Что приложению нужно от инфраструктуры)
+│   │       └── SatelliteRepository.scala
+│   │
+│   └── usecase/                     # Реализация сценариев (Наши бывшие "Сервисы")
+│       └── TrackSatelliteService.scala
+│
+├── infrastructure/                  # ⚙️ INFRASTRUCTURE LAYER (Адаптеры, внешнее кольцо)
+│   ├── http/                        # Входной адаптер (Http4s Routes, Circe JSON)
+│   │   └── SatelliteRoutes.scala
+│   │
+│   └── db/                          # Выходной адаптер (Doobie Репозиторий, Postgres SQL)
+│       └── DoobieSatelliteRepository.scala
+│
+└── Main.scala                       # 🏁 COMPOSITION ROOT (Склейка программы через Cats Effect)
+
 
 //
 

@@ -1,0 +1,37 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/project-space-umbrella_3-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db/migration[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db/migration[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db/migration/V5__create_satellites_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db/migration/V5__create_satellites_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db/migration/V1__create_users_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db/migration/V1__create_users_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db/migration/V6__insert_satellites_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db/migration/V6__insert_satellites_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db/migration/V2__create_tokens_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db/migration/V2__create_tokens_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db/migration/V4__create_categories_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db/migration/V4__create_categories_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	db/migration/V3__create_passports_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/db/migration/V3__create_passports_table.sql[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella/runSpaceUmbrella.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella/runSpaceUmbrella.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella/Main$package$SpaceAsset$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella/Main$package$SpaceAsset$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella/runSpaceUmbrella.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella/runSpaceUmbrella.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella/Main$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella/Main$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella/Main$package$SpaceAsset$3$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella/Main$package$SpaceAsset$3$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella/Main$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella/Main$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com/spaceumbrella/Main$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/alexander/IdeaProjects/scala3-project-space-umbrella/backend/target/scala-3.3.3/classes/com/spaceumbrella/Main$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
