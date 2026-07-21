@@ -41,8 +41,8 @@ Hexagonal Architecture allows you to keep the system's core intact for a long ti
   │  │  └────────────────────────────────────────────────────────┼───┘  │  │
   │  │                                                           │      │  │
   │  │   [Inbound Adapter]                                       ▼      │  │
-──┼──┼─> Drives the application (API/CLI/Cron)   [Out Adapter]─────────>[External Services]
-  │  │                                      Driven by application (Database/Message Broker)
+──┼──┼─> Drives the application (API/CLI/Cron)     [Out Adapter]─────────>[External Services]
+  │  │                                         Driven by application (Database/Message Broker)
   │  └──────────────────────────────────────────────────────────────────┘  │
   └────────────────────────────────────────────────────────────────────────┘
 ```
