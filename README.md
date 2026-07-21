@@ -1,4 +1,4 @@
-# Project <span style="color:#869e37;">Space Umbrella</span> 🛸 - Scala 3
+# Project <span style="color: green;">Space Umbrella</span> 🛸 - Scala 3
 
 This project acts as a showcase of modern **Scala 3** development practices, leveraging **Http4s**, **Cats**, and **Doobie** 
 to build a deterministic orbital asset management system. Designed to simulate the core inventory requirements of the 
@@ -10,7 +10,7 @@ satellites and deep-space anomaly tracking.
     <img src="./frontend/public/images/1000001043.png" width="400" />
 </p>
 
-This project features **Hexagonal Architecture**, which is highly popular in Spanish development projects.
+This project features **Hexagonal Architecture** and **DDD** (Domain-Driven Design), which is highly popular in Spanish development projects.
 I think it's very important to have the opportunity to avoid being double standards and fast-paced technologies.
 Hexagonal Architecture allows you to keep the system's core intact for a long time.
 
