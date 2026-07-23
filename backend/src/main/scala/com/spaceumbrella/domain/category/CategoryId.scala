@@ -1,4 +1,4 @@
-package com.spaceumbrella.domain.model.category
+package com.spaceumbrella.domain.category
 
 /**
  * CategoryId - это value class, который оборачивает Long.

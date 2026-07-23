@@ -1,6 +1,6 @@
 package com.spaceumbrella.application.port.out
 
-import com.spaceumbrella.domain.model.category.{Category, CategoryId}
+import com.spaceumbrella.domain.category.{Category, CategoryId}
 import scala.concurrent.Future
 
 /**
@@ -13,8 +13,10 @@ import scala.concurrent.Future
  */
 trait CategoryRepository {
   def create(category: Category): Future[Category]
+
   // Используем строго типизированный CategoryId вместо Long
   def findById(id: CategoryId): Future[Option[Category]]
+
   def findAll: Future[List[Category]]
 }
 

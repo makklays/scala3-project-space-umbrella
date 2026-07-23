@@ -1,11 +1,11 @@
-package com.spaceumbrella.infrastructure.db
+package com.spaceumbrella.infrastructure.out.db
 
 import doobie._
 import doobie.implicits._
 import cats.effect.IO
 import cats.effect.unsafe.Implicits.global // Необходим для работы .unsafeToFuture()
-import com.spaceumbrella.domain.model.category.{Category, CategoryId}
 import com.spaceumbrella.application.port.out.CategoryRepository
+import com.spaceumbrella.domain.category.{Category, CategoryId}
 import scala.concurrent.Future
 
 /**

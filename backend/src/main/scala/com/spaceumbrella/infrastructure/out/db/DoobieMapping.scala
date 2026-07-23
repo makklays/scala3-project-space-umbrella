@@ -1,7 +1,7 @@
-package com.spaceumbrella.infrastructure.db
+package com.spaceumbrella.infrastructure.out.db
 
+import com.spaceumbrella.domain.category.CategoryId
 import doobie.Meta
-import com.spaceumbrella.domain.model.category.CategoryId
 
 /**
  * Объект, содержащий implicit маппинги для doobie.

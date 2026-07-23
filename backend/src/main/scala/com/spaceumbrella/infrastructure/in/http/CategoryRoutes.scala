@@ -1,15 +1,14 @@
-package com.spaceumbrella.infrastructure.http
+package com.spaceumbrella.infrastructure.in.http
 
 import org.http4s.*
 import org.http4s.dsl.Http4sDsl
 import io.circe.generic.auto.*
 import org.http4s.circe.CirceEntityCodec.*
-
-import com.spaceumbrella.domain.model.category.CategoryId
-import com.spaceumbrella.application.port.in.CreateCategoryCmd
 import com.spaceumbrella.application.usecase.category.{CreateCategoryUseCase, GetCategoryUseCase, ListCategoriesUseCase}
 import scala.concurrent.{ExecutionContext, Future}
-import cats.instances.future.* // Подключает поддержку Future в структуры Cats/Http4s
+import cats.instances.future.*
+import com.spaceumbrella.application.command.CreateCategoryCmd
+import com.spaceumbrella.domain.category.CategoryId // Подключает поддержку Future в структуры Cats/Http4s
 
 /**
  * HTTP маршруты для работы с категориями.

@@ -1,4 +1,4 @@
-package com.spaceumbrella.domain.model.category
+package com.spaceumbrella.domain.category
 
 import java.time.ZonedDateTime
 import java.time.Instant
